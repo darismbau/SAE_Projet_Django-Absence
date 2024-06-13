@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block title %}
+L'ensemble des enseignanats inscrits
+{% endblock %}
+{% block content %}
+<header>
+    <h1>L'ensemble des enseignants inscrits</h1>
+    <a href="/absence" class="btn">Portail</a>
+    <a href="/absence/saisieeng" class="btn">Formulaire d'ajout des nouveaux enseignants</a>
+</header><br>
+<section class="tn">
+    <ol>
+    {% for l in liste %}
+            <li>
+                {{l}} <br> <a href="/absence/affichageeng/{{l.id}}/" class="t">| Lire</a>|<a href="/absence/updateeng/{{l.id}}/" class="t">Mettre à jour</a>|<a href="/absence/deleteeng/{{l.id}}" class="t">Supprimer|</a>
+            </li>
+    {% endfor %}
+</ol>
+</section>
+{% endblock %}

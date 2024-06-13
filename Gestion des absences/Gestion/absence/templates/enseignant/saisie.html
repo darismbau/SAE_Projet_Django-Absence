@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block title %}
+Enregistrement des enseignants
+{% endblock %}
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ <div class="dar"><h1>Formulaire d'ajout des enseignants</h1></div><br><div class="rad">
+        <br><br>
+        {% if id is not None %}
+                <form method="post" action="/absence/updatetraitementeng/{{id}}/">
+        {% else %}
+                <form method="post" action="/absence/traitementeng/">
+        {% endif %}
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <input type="submit" value="Soumettre">
+        </form> </div>
+<footer>
+    <h3>Enregistrement d'un enseignant</h3>
+</footer>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block title %}
+RESTITUTION
+{% endblock %}
+{% block content %}
+<br><br><br><br><br><br><div class="rad">
+<h3>{{absence.etudiant}}<br><br>{{absence.cours}}</h3><br>
+{% if absence.justifie %}
+    <h4>L'absence a été justifiée</h4>
+    <img src="{{absence.justification.url}}" width="450" height="500">
+{% else %}
+    L'absence n'a pas été justifiée
+{% endif %}
+</div>
+{% endblock %}

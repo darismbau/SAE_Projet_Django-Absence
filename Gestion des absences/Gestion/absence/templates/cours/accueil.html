@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block title %}
+L'ensemble des cours enregistrés
+{% endblock %}
+{% block content %}
+    <header>
+    <h1>Les cours inscrits dans le registre</h1>
+    <a href="/absence" class="btn">Portail</a>
+    <a href="/absence/saisiecours" class="btn">Formulaire de saisie des nouveaux cours</a>
+    </header><br>
+<section class="tn">
+    <ol>
+    {% for l in liste %}
+            <li>
+                {{l}} <br> <a href="/absence/affichagecours/{{l.id}}/" class="t">| Lire</a>|<a href="/absence/updatecours/{{l.id}}/" class="t">Mettre à jour</a>|<a href="/absence/deletecours/{{l.id}}" class="t">Supprimer|</a>
+            </li>
+    {% endfor %}
+</ol>
+</section>
+{% endblock %}

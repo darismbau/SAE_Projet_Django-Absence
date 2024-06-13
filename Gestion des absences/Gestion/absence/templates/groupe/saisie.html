@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block title %}
+Inscription des groupes d'étudiants
+{% endblock %}
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <div class="dar"><h1>Inscription des groupes d'étudiants</h1></div><br><div class="rad">
+        <br>
+        {% if id is not None %}
+                <form method="post" action="/absence/updatetraitementgr/{{id}}/">
+        {% else %}
+                <form method="post" action="/absence/traitementgr/">
+        {% endif %}
+        {% csrf_token %}
+        {{form.as_p}}
+         <br>
+        <input type="submit" value="Soumettre">
+         </form></div>
+{% endblock %}

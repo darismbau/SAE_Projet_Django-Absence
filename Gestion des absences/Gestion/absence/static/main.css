@@ -1,0 +1,135 @@
+body {
+    background: url(Etudiant.jpg) center;
+    font-family: Arial, sans-serif;
+    /*  background-color: #b8b5b5; */
+}
+header {
+    padding: 1em 0em 1em 0em;
+    width: 70%;
+    margin: 0% auto;
+    /*background-color:rgba(168, 137, 0,0.5) ;*/
+    min-height: 150px;
+    border-radius:0px 0px 150px 150px;
+    /* font-family: "Oswald";*/
+    font-weight: 700;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: rgba(109, 89, 0, 0.5);
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: inset -2px -2px 4px 0px #0000006f;
+    text-decoration: none;
+    text-align: center;
+}
+.btn {  /* Les champs d'entête CSS */
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+section {
+    padding: 1em 0em 1em 0em;
+    width: 70%;
+    margin: 0% auto;
+    min-height: 500px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    color: #fff;
+}
+.t {
+    text-decoration: none;
+    font-family: oswald,sans-serif;
+    color: blue;
+}
+.tn {
+    padding: 1em 0em 1.5em 0em;
+    width: 70%;
+    margin:0% auto;
+    min-height: 450px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: inset -2px -2px 4px 0px #0000006f;
+    color:rgb(200, 200, 200);
+    text-decoration: none;
+    flex-basis: 55%;
+    text-align:center;
+    max-width: 1200px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 20px; /* Ajoute un espace autour du contenu */
+}
+.tnb {
+    padding: 1em 0em 1.5em 0em;
+    width: 70%;
+    margin:0% auto;
+    min-height: 450px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0);
+    cursor: pointer;
+    box-shadow: inset -2px -2px 4px 0px #0000006f;
+    color:rgb(200, 200, 200);
+    text-decoration: none;
+    flex-basis: 55%;
+    text-align:center;
+    max-width: 1200px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 20px; /* Ajoute un espace autour du contenu */
+}
+.tn h1 {
+    text-align: center; /* Centre le titre principal */
+    color: #333; /* Couleur du texte */
+}
+.tn p {
+    line-height: 1.6; /* Espace entre les lignes pour meilleure lisibilité */
+    color: #555; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace en dessous des paragraphes */
+}
+.titi {
+    padding: 1em 0em 1.5em 0em;
+    width: 70%;
+    margin:0% auto;
+    min-height: 450px;
+    background: url(titi.png) center;
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.dar {
+    padding: 1em 0em 1em 0em;
+    width: 50%;
+    margin: 0% auto;
+    min-height: 70px;
+    background-color:rgba(255, 18, 18, 0.8);
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+}
+.rad {
+    padding: 1em 0em 1em 0em;
+    width: 30%;
+    margin: 0% auto;
+    min-height: 70px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+}
+footer{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0,0.5);
+    box-shadow: inset 5px 5px 5px 0px #0000006f;
+    text-align: center;
+}

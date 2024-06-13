@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% block title %}
+Portail Administratif des Absences Étudiantes
+{% endblock %}
+{% block content %}
+<header>
+    <h1>Portail Administratif des Absences Étudiantes</h1>
+    <a href="/absence/saisie" class="btn">Formulaire d'Ajout d'Absence</a>
+    <a href="/absence/cours" class="btn">Cours</a>
+    <a href="/absence/enseignant" class="btn">Enseignants</a>
+    <a href="/absence/etudiant" class="btn">Etudiants</a>
+    <a href="/absence/groupe" class="btn">Groupes</a>
+    <a href="#structure" class="btn">Voir la Liste complete des Absences Étudiantes</a>
+</header><br>
+<article class="tn">
+    <p>
+    <h2 style="color: #fff;">Bienvenue sur l'interface de gestion des absences !</h2>
+Nous savons que la gestion des cours et des absences peut être une tâche ardue, alors nous avons conçu cette page pour rendre le processus aussi simple et fluide que possible. Voici un aperçu détaillé de ce que vous pouvez faire ici et comment tirer le meilleur parti de nos fonctionnalités. <br>
+<h4 style="color: #fff;"><u>Ajouter des cours</u></h4>
+Vous pouvez facilement ajouter de nouveaux cours en quelques étapes simples. Il vous suffit de remplir les informations requises, telles que le nom du cours, l'heure, la date, et le professeur. Cette fonctionnalité vous permet de garder une trace précise de tous les cours que vous suivez ou que vous dispensez.<br>
+<h4 style="color: #fff;"><u>Enregistrer des absences</u></h4>
+En quelques clics, vous pouvez noter les absences des étudiants pour chaque cours. Sélectionnez le cours concerné, choisissez l'étudiant, et indiquez la raison de l'absence si elle est connue. Cela vous aide à maintenir un registre clair et à jour des absences.<br>
+    <h4 style="color: #fff;"><u>Valider les absences</u></h4>
+Pour garantir l'exactitude de vos enregistrements, vous pouvez valider les absences. Cette étape de validation permet de vérifier et de confirmer que les informations enregistrées sont correctes.<br>
+    <h4 style="color: #fff;"><u>Ajouter des justificatifs</u></h4>
+Nous comprenons que certaines absences doivent être justifiées. Vous pouvez facilement télécharger des justificatifs pour chaque absence enregistrée. Assurez-vous de fournir les documents sous forme d'images au format JPG, PNG, JPEG. Cela nous permet de traiter vos documents de manière efficace et sans retard.<br>
+    <!-- <h4 style="color: #fff;"><u>Importer des absences via fichier</u></h4>
+Pour vous faire gagner encore plus de temps, nous vous offrons la possibilité de charger un fichier contenant plusieurs enregistrements d'absences. Cela est particulièrement utile si vous avez un grand nombre d'absences à enregistrer à la fois.<br> -->
+<h4 style="color: #fff;"><u>Formats de fichiers acceptés</u></h4>
+Pour garantir un traitement rapide et précis de vos justificatifs d'absence, nous acceptons uniquement les fichiers au format PDF ou JPG. Cette standardisation nous aide à gérer les documents de manière uniforme et à éviter les erreurs de traitement. Merci de vous assurer que vos documents respectent ces formats avant de les télécharger.<br>
+<h4 style="color: #fff;"><u>Assistance et support</u></h4>
+Si vous avez besoin d'une assistance supplémentaire, notre équipe de support est toujours prête à vous aider. Vous pouvez les contacter directement par téléphone.
+Nous espérons que cette page rendra la gestion des absences plus simple et plus efficace pour vous. Merci de votre coopération et de votre engagement à maintenir un suivi précis.<br><br>
+Cordialement,<br>
+L'équipe de gestion des absences
+    <br><br><a href="#structure" class="btn">Contact</a>
+    </p>
+</article><br>
+<article class="titi"></article><br>
+<section class="tnb">
+    <h1 id="structure">Liste complete des Absences Étudiantes</h1> <a href="/absence" class="btn">Portail</a>
+    <ol>
+    {% for l in liste %}
+            <li>
+                {{l}} <br> <a href="/absence/affichage/{{l.id}}/" class="t">| Lire</a>|<a href="/absence/update/{{l.id}}/" class="t">Mettre à jour</a>|<a href="/absence/delete/{{l.id}}" class="t">Supprimer|</a>
+            </li>
+    {% endfor %}
+</ol>
+</section> <br>
+<article class="titi"></article><br>
+<footer>
+    <h3 id="contact">Contact</h3>
+</footer>
+{% endblock %}

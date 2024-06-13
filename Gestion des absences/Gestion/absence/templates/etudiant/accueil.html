@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% block title %}
+Liste complète des étudiants inscrits
+{% endblock %}
+{% block content %}
+<header>
+    <h1>Liste complète des étudiants inscrits</h1>
+    <a href="/absence" class="btn">Portail</a>
+    <a href="/absence/saisieetu" class="btn">Enregistrement d'un nouveau étudiant</a>
+    <a href="#structure" class="btn">Voir la structure sous forme de lignes et de colonnes</a>
+</header><br>
+<section class="tn">
+    <ol>
+    {% for l in liste %}
+            <li>
+                {{l}} <br> <a href="/absence/affichageetu/{{l.id}}/" class="t">| Lire</a>|<a href="/absence/updateetu/{{l.id}}/" class="t">Mettre à jour</a>|<a href="/absence/deleteetu/{{l.id}}" class="t">Supprimer|</a>
+            </li>
+    {% endfor %}
+</ol>
+
+<br><br>
+<h1 id="structure">Structure sous forme de lignes et de colonnes</h1>
+<table border="1" style="border-collapse:collapse;">
+    <thead>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email</th>
+    <th>Groupe</th>
+    <th>Photo</th>
+    </thead>
+    {% for etudiant in data %}
+    <tr>
+        <td>{{etudiant.nom}}</td>
+        <td>{{etudiant.prenom}}</td>
+        <td>{{etudiant.email}}</td>
+        <td>{{etudiant.groupe}}</td>
+        <td width="48"><img src="{{ etudiant.photo.url }}" width="48" height="48"></td>
+    </tr>
+    {% endfor %}
+</table>
+</section>
+{% endblock %}

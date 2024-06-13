@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absence Report for {{ student.first_name }} {{ student.last_name }}</title>
+</head>
+<body>
+    <h1>Absence Report for {{ student.first_name }} {{ student.last_name }}</h1>
+    <p>Total Justified Absences: {{ justified_absences }}</p>
+    <p>Total Unjustified Absences: {{ unjustified_absences }}</p>
+    <table border="1">
+        <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Justified</th>
+        </tr>
+        {% for absence in absences %}
+        <tr>
+            <td>{{ absence.course.name }}</td>
+            <td>{{ absence.date }}</td>
+            <td>{{ absence.justified }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

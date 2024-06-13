@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block title %}
+Enregistrement étudiants
+{% endblock %}
+{% block content %}
+<br><br><br><br><br><br><br>
+ <div class="dar"><h1>Enregistrement d'un nouveau étudiant</h1></div><br><div class="rad">
+        <br><br>
+        {% if id is not None %}
+                <form method="post" action="/absence/updatetraitementetu/{{id}}/ " enctype="multipart/form-data">
+        {% else %}
+                <form method="post" action="/absence/traitementetu/" enctype="multipart/form-data">
+        {% endif %}
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <input type="submit" value="Soumettre">
+        </form> </div>
+<footer>
+        <a class="btn" href="/absence/">Portail</a>
+        <a class="btn" href="/absence/etudiant">L'ensemble</a>
+</footer>
+{% endblock %}

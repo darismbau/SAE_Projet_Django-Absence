@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% block title %}
+Inscription des groupes d'étudiants
+{% endblock %}
+{% block content %}
+<header>
+    <h1>Inscription des groupes d'étudiants</h1>
+    <a href="/absence" class="btn">Portail</a>
+    <a href="/absence/saisiegr" class="btn">Formulaire de saisie des groupes</a>
+</header> <br>
+<section class="tn">
+    <ol>
+    {% for l in liste %}
+            <li>
+                {{l}} <br> <a href="/absence/affichagegr/{{l.id}}/" class="t">| Lire</a>|<a href="/absence/updategr/{{l.id}}/" class="t">Mettre à jour</a>|<a href="/absence/deletegr/{{l.id}}" class="t">Supprimer|</a>
+            </li>
+    {% endfor %}
+</ol>
+</section>
+{% endblock %}
